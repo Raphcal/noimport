@@ -1,0 +1,17 @@
+{
+  "name": "noimport",
+  "version": "1.0.0",
+  "description": "Resolves ES2015 imports and patch everything into a flat file.",
+  "author": {
+    "email": "ddaeke-npmjs@yahoo.com",
+    "name": "Raphaël Calabro"
+  },
+  "main": "noimport.js",
+  "bin": {
+    "noimport": "./noimport.js"
+  },
+  "keywords": [
+    "import", "es2015"
+  ],
+  "license": "LGPL-3.0-or-later"
+}
