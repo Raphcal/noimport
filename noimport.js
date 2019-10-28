@@ -13,6 +13,11 @@ if (args.length < 1 || args.length > 2) {
 }
 
 if (args.length == 2) {
+    // Create parent directory if necessary.
+    var parent = path.basename(args[1]);
+    if (!fs.existsSync(parent)) {
+        fs.mkdirSync(parent, { recursive: true });
+    }
     // Create or override the output file.
     var fileDescriptor = fs.openSync(args[1], 'w');
     fs.writeSync(fileDescriptor, mash(path.normalize(path.resolve(args[0])), new Set()));
